@@ -1,0 +1,21 @@
+version: 1.4
+
+prefs:
+  logPath: /home/jobberuser/jobber.log
+  runLog:
+    type: file
+    path: /home/jobberuser/runlog
+    maxFileLen: 100m
+    maxHistories: 2
+
+jobs:
+  s3databackup:
+    cmd: /home/jobberuser/backup.sh
+    time: '0 */6 * * * *'
+    onError: Continue
+    notifyOnSuccess:
+      - type: program
+        path: /home/jobberuser/win.sh
+    notifyOnError:
+      - type: program
+        path: /home/jobberuser/fail.sh
