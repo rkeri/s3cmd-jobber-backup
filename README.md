@@ -14,6 +14,20 @@ Current features:
 - Should be compatible with all major cloud providers (only tried digitalocean)
 - Safely pass your private keys with ENV (secret inject in progress)
 
+## How to use?
+The following variables are required:
+- ACCESS_KEY
+- SECRET_KEY
+- HOST_BUCKET
+- HOST_BASE
+- S3_PATH
+- DATA_PATH
+
+Add the image (rkeri/s3cmd-jobber-backup) to your main image as a sidecar,
+and mount the backup data volume to it as readonly (DATA_PATH).
+Run it, and the contents of your backup should be synced with your s3 storage.
+
+
 TODO:
 - working cron env
 - slack integration for backup information
