@@ -27,8 +27,10 @@ The following variables are can be configured (~ is optional, * is the explanati
 - ~WEBHOOK_URL*** - your slack webhook url (https://api.slack.com/messaging/webhooks)
 
 :* Default time is daily at 13:00
+
 :** Possible options: yes/no (default is yes). If yes is provided, WEBHOOK_URL
 should be filled too
+
 :*** Only required if SLACK_ENABLE=yes
 
 Add the image (rkeri/s3cmd-jobber-backup) to your main image as a sidecar,
