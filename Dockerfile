@@ -16,9 +16,9 @@ RUN pip install python-magic \
   && rm -rf /tmp/s3cmd \
   && apk del py-pip git
 
-ADD s3cfg /home/jobberuser/.s3cfg && \
-  jobberfile /home/jobberuser/.jobber && \
-  sh/* /home/jobberuser/
+ADD s3cfg /home/jobberuser/.s3cfg
+ADD jobberfile /home/jobberuser/.jobber
+ADD sh/* /home/jobberuser/
 
 RUN chown jobberuser:jobberuser /home/jobberuser/* && \
   chmod 0600 /home/jobberuser/.s3cfg && \
