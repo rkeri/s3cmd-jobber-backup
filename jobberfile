@@ -11,7 +11,7 @@ prefs:
 jobs:
   s3databackup:
     cmd: /home/jobberuser/backup.sh
-    time: '0 */6 * * * *'
+    time: 'JOBBER_TIME_ENV'
     onError: Continue
     notifyOnSuccess:
       - type: program

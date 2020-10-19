@@ -22,6 +22,7 @@ The following variables are required:
 - HOST_BASE
 - S3_PATH
 - DATA_PATH
+- JOBBER_TIME
 
 Add the image (rkeri/s3cmd-jobber-backup) to your main image as a sidecar,
 and mount the backup data volume to it as readonly (DATA_PATH).
