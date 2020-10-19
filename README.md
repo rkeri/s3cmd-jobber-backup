@@ -34,6 +34,6 @@ TODO:
 - delete / sync / put options
 - option to delete files older than n days
 - a lot of refactoring
-- use lighter alpine image for a more optimized experience
+- ~~use lighter alpine image for a more optimized experience~~
 - prometheus sidecar
 - sidecar injection support
