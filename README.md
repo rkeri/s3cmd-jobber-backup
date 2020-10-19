@@ -1,4 +1,4 @@
-# s3cmd-jobber-backup
+# s3cmd-sidecar
 Version 0.2
 
 Docker hub link: https://hub.docker.com/r/rkeri/s3cmd-jobber-backup
