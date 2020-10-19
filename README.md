@@ -1,7 +1,7 @@
 # s3cmd-sidecar-backup
 Version 0.2
 
-Docker hub link: https://hub.docker.com/r/rkeri/s3cmd-jobber-backup
+Docker hub link: https://hub.docker.com/r/rkeri/s3cmd-sidecar-backup
 
 ## What's this?
 
@@ -33,7 +33,7 @@ should be filled too
 
 :*** Only required if SLACK_ENABLE=yes
 
-Add the image (rkeri/s3cmd-jobber-backup) to your main image as a sidecar,
+Add the image (rkeri/s3cmd-sidecar-backup) to your main image as a sidecar,
 and mount the backup data volume to it as readOnly (DATA_PATH).
 Run it, and the contents of your backup should be synced with your s3 storage.
 
