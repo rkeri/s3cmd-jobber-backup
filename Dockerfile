@@ -1,11 +1,11 @@
 FROM jobber:1.4.4-alpine3.11
 MAINTAINER rkeri
 
-# ENV SLACK_ENABLE=false
+ENV SLACK_ENABLE=no
+ENV JOBBER_TIME="0 0 13"
 
 USER root
 
-# RUN apk add --no-cache bash
 RUN apk --no-cache add curl
 
 RUN apk add --no-cache python py-pip py-setuptools git ca-certificates
