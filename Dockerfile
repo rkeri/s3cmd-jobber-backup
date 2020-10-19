@@ -1,6 +1,8 @@
 FROM jobber:1.4.4-alpine3.11
 MAINTAINER rkeri
 
+# ENV SLACK_ENABLE=false
+
 USER root
 
 # RUN apk add --no-cache bash
@@ -20,10 +22,10 @@ ADD s3cfg /home/jobberuser/.s3cfg
 ADD jobberfile /home/jobberuser/.jobber
 ADD sh/* /home/jobberuser/
 
-RUN chown jobberuser:jobberuser /home/jobberuser/* && \
+RUN chown -R jobberuser:jobberuser /home/jobberuser && \
   chmod 0600 /home/jobberuser/.s3cfg && \
-  chmod 0600 /home/jobberuser/.jobber && \
-  chmod +x /home/jobberuser/*.sh
+  chmod +x /home/jobberuser/*.sh && \
+  chmod 0600 /home/jobberuser/.jobber
 
 USER jobberuser
 

@@ -23,6 +23,8 @@ The following variables are required:
 - S3_PATH
 - DATA_PATH
 - JOBBER_TIME
+- SLACK_ENABLE
+- WEBHOOK_URL
 
 Add the image (rkeri/s3cmd-jobber-backup) to your main image as a sidecar,
 and mount the backup data volume to it as readonly (DATA_PATH).
@@ -30,10 +32,10 @@ Run it, and the contents of your backup should be synced with your s3 storage.
 
 TODO:
 - ~~working cron env~~
-- slack integration for backup information
-- delete / sync / put options
+- ~~slack integration for backup information~~
+- delete / put options
 - option to delete files older than n days
-- a lot of refactoring
+- ~~a lot of refactoring~~
 - ~~use lighter alpine image for a more optimized experience~~
 - prometheus sidecar
 - sidecar injection support

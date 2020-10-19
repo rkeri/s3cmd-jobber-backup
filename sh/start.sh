@@ -3,7 +3,8 @@
 set -e
 # : ${S3_PATH:?"S3_PATH env variable is required"}
 # export DATA_PATH=${DATA_PATH:-/data/}
-sed -i -e "s/JOBBER_TIME_ENV/$JOBBER_TIME/g" /home/jobberuser/.jobber
+sed -i -e 's@JOBBER_TIME_ENV@'"$JOBBER_TIME"'@g' /home/jobberuser/.jobber
+# chmod 0600 /home/jobberuser/.jobber
 
 if [[ -n "$ACCESS_KEY"  &&  -n "$SECRET_KEY" ]]; then
     echo "access_key=$ACCESS_KEY" >> /home/jobberuser/.s3cfg

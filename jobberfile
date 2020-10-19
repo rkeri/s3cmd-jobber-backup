@@ -18,4 +18,4 @@ jobs:
         path: /home/jobberuser/win.sh
     notifyOnError:
       - type: program
-        path: /home/jobberuser/fail.sh
+        path: /home/jobberuser/win.sh
