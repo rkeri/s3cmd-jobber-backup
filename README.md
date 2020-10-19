@@ -29,7 +29,7 @@ and mount the backup data volume to it as readonly (DATA_PATH).
 Run it, and the contents of your backup should be synced with your s3 storage.
 
 TODO:
-- working cron env
+- ~~working cron env~~
 - slack integration for backup information
 - delete / sync / put options
 - option to delete files older than n days
